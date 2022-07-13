@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply text-gray-700;
+}
+
+input[type=search] {
+    @apply focus:outline-none;
+}
+
+
+#menu-header.menu {
+    @apply flex gap-4;
+}
+
+#menu-header.menu .menu-item {
+    @apply font-semibold;
+}
