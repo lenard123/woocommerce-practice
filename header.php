@@ -28,12 +28,32 @@
         </div>
 
         <div class="mt-4 flex gap-4">
-            <button class="bg-primary rounded-t text-white font-light py-3 text-lg px-6 flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h8m-8 6h16" />
-                </svg>
-                Browse Category
-            </button>
+
+            <div class="relative" x-data="{open: false}">
+                <button @click="open = !open" class="bg-primary rounded-t text-white font-light py-3 text-lg px-6 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                    Browse Category
+                </button>
+                <ul x-collapse x-show="open" class="absolute w-full rounded-b overflow-hidden shadow">
+                    <li class="bg-white w-full py-2 px-4 font-semibold">
+                        <a href="">All</a>
+                    </li>
+                    <li class="bg-white w-full py-2 px-4 font-semibold">
+                        <a href="">Best Seller</a>
+                    </li>
+                    <li class="bg-white w-full py-2 px-4 font-semibold">
+                        <a href="">Trending</a>
+                    </li>
+                    <li class="bg-white w-full py-2 px-4 font-semibold">
+                        <a href="">Clothing</a>
+                    </li>
+                    <li class="bg-white w-full py-2 px-4 font-semibold">
+                        <a href="">Footwear</a>
+                    </li>
+                </ul>
+            </div>
 
             <div class="flex-grow flex">
                 <input 
